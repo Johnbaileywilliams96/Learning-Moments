@@ -1,0 +1,29 @@
+h2 {
+    border: none;
+    border-bottom: 3px solid var(--col-2);
+    padding: 0.25rem 0;
+  }
+
+
+
+  .post-list-item {
+    background: #f4f6f9;
+  width: 80%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 4px 10px hsla(0, 0%, 0%, 0.3),
+    2px 4px 20px hsla(0, 0%, 0%, 0.2);
+  }
+
+
+  .post-info {
+    width: 20%;
+    margin: 1rem 0;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    background: rgb(231, 219, 219);
+    color: var(--col-5);
+    border: 2px solid var(--col-5);
+  }
