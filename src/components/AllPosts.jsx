@@ -4,6 +4,9 @@ import { getPostService } from "../services/PostService"
 import { Post } from "./Post"
 import { getTopic } from "../services/TopicServices"
 import { HandlePostSearch } from "./PostSearch"
+import { getAllLikes } from "../services/LikesService"
+
+
 
 
 
@@ -13,6 +16,7 @@ export const AllPosts = () => {
     const [filteredPosts, setAllFilteredPosts] = useState([])
     const [selectedTopicId, setSelectedTopicId] = useState("0")
     const [searchTerm, setSearchTerm] = useState('')
+    const [likes, setAllLikes] = useState([])
     
         const fetchAllPosts = async () => {
             getPostService().then((postArray) => {
@@ -28,21 +32,25 @@ export const AllPosts = () => {
             
         }
 
+        const fetchAllLikes = async () => {
+            getAllLikes().then((likesArray) => {
+                setAllLikes(likesArray)
+            })
+        }
 
+
+         
 
     useEffect(() => {
        fetchAllPosts()
        fetchAllTopics()
+       fetchAllLikes()
     }, [])
-
 
     useEffect(() => {
         const foundPosts = posts.filter(post => post.title.toLowerCase().includes(searchTerm.toLowerCase()))
         setAllFilteredPosts(foundPosts)
     }, [searchTerm, posts])
-
-
-
 
     const handleTopicChange = (event) => {
         const topicId = event.target.value
@@ -58,6 +66,7 @@ export const AllPosts = () => {
 
 
     return <>
+
 
 <h2>All Posts</h2>
 
@@ -77,14 +86,16 @@ export const AllPosts = () => {
         )}
         </select>
         </div>
-
-
-
+       
 
     <div className="post">{filteredPosts.map((post) => {
-
+        const postLikes = likes.filter(like => like.postId === post.id)
         return <>
-        <Post post={post} key={post.id}/>
+        <Post 
+        post={post} 
+        key={post.id}
+        likes={postLikes}
+            />
         </>
     })}
     
