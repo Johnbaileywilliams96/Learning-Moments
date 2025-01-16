@@ -2,8 +2,6 @@ export const getAllLikes = async () => {
     return fetch(`http://localhost:8088/userLikes?_expand=user&_expand=post`).then((res) => res.json())
 }
 
-
-
 export const createLikes = async (like) => {
     return fetch("http://localhost:8088/userLikes", {
         method: "POST",
@@ -14,4 +12,8 @@ export const createLikes = async (like) => {
     }).then((res) => res.json())
 }
 
-// console.log(getPostService())
+export const deleteLike = (likeId) => {
+    return fetch(`http://localhost:8088/userLikes/${likeId}`, {
+        method: "DELETE"
+    })
+}

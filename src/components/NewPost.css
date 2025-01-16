@@ -1,0 +1,82 @@
+.new-post-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .input-label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.1rem;
+  }
+  
+  .post-title-input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  #topics {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .post-body-input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+  }
+  
+  .post-save {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .post-save:hover {
+    background-color: #0052a3;
+  }
+  
+  .post-save:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.3);
+  }
+  
+  input:focus,
+  #topics:focus,
+  .post-body-input:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+  }
