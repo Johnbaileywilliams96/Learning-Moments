@@ -1,0 +1,89 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  
+  .navbar-item {
+    margin: 0 1rem;
+    position: relative;
+  }
+  
+  .navbar-item:last-child {
+    margin-left: auto;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .navbar a:active {
+    transform: translateY(0);
+  }
+  
+  /* Active link styling */
+  .navbar a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+  }
+  
+  /* Logout button specific styling */
+  .navbar li:last-child a {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+  }
+  
+  .navbar li:last-child a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Responsive design */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 1rem;
+      justify-content: center;
+    }
+  
+    .navbar-item {
+      margin: 0.5rem;
+    }
+  
+    .navbar-item:last-child {
+      margin: 0.5rem;
+    }
+  }
+  
+  /* Optional: Add a subtle border bottom to indicate hover state */
+  .navbar-item a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-item a:hover::after {
+    width: 80%;
+  }

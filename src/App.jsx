@@ -1,16 +1,3 @@
-// import { AllPosts } from "./components/AllPosts"
-
-// export const App = () => {
-//   return <>
-//   <AllPosts />
-//   </>
-// }
-
-// <div>Hello World!</div>
-
-
-
-
 import { Route, Routes } from "react-router-dom"
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register"

@@ -1,11 +1,15 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { AllPosts } from "../components/AllPosts"
-import { NavBar } from "../components/NavBar"
+import { NavBar } from "../components/NavBar/NavBar"
 import { useEffect, useState } from "react"
 import { PostDetails } from "../components/PostDetails"
+import { NewPost } from "../components/NewPost"
+
 
 export const ApplicationViews = () => {
     const [currentUser, setCurrentUser] = useState({})
+
+
 
     useEffect(() => {
       const localLearningUser = localStorage.getItem("learning_user")
@@ -27,7 +31,10 @@ export const ApplicationViews = () => {
                 </Route>
 
                 <Route path="postDetails/:postId">
-                    <Route index element={<PostDetails />} />
+                    <Route index element={<PostDetails currentUser={currentUser} />} />
+                </Route>
+                <Route path="newPost">
+                    <Route index element={<NewPost currentUser={currentUser} />} />
                 </Route>
                 {/* Other nested routes go here */}
             </Route>

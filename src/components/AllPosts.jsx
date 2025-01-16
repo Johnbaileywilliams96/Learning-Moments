@@ -1,13 +1,10 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import { getPostService } from "../services/PostService"
+import { getPostService } from "./../services/PostService"
 import { Post } from "./Post"
-import { getTopic } from "../services/TopicServices"
+import { getTopic } from "./../services/TopicServices"
 import { HandlePostSearch } from "./PostSearch"
-import { getAllLikes } from "../services/LikesService"
-
-
-
+import { getAllLikes } from "./../services/LikesService"
 
 
 export const AllPosts = () => {
@@ -68,7 +65,7 @@ export const AllPosts = () => {
     return <>
 
 
-<h2>All Posts</h2>
+<h1>All Posts</h1>
 
 <HandlePostSearch setSearchTerm={setSearchTerm}/>
 

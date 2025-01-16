@@ -1,12 +1,95 @@
+/* Main container styles */
 .post {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 3rem;
-  }
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 4rem);
+}
 
-  .post > * {
-    flex-basis: 31%;
-    margin: 0.5rem;
-  }
+/* Header styles */
+.post-header {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+/* Content container styles */
+.post div {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+/* Label styles */
+.post-info {
+    font-weight: 600;
+    color: #2d3748;
+    margin-right: 0.5rem;
+}
+
+/* Date specific styles */
+div:has(.post-info:contains("Date")) {
+    font-size: 0.95rem;
+    color: #718096;
+}
+
+/* Likes specific styles */
+div:has(.post-info:contains("Likes")) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Topic specific styles */
+div:has(.post-info:contains("Topic")) {
+    background-color: #f7fafc;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Body text specific styles */
+div:has(.post-info:contains("Body")) {
+    white-space: pre-wrap;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .post {
+        margin: 1rem;
+        padding: 1.5rem;
+        min-height: calc(100vh - 2rem);
+    }
+    
+    .post-header {
+        font-size: 1.5rem;
+    }
+    
+    .post div {
+        font-size: 1rem;
+    }
+}
+
+h1 {
+    padding-top: 4rem;
+    font-size: 5rem;
+    color: #333;
+    text-align: center;
+    margin: 2rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
