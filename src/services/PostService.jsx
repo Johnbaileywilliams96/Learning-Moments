@@ -25,3 +25,17 @@ export const createNewPost = async (post) => {
         body: JSON.stringify(post),
     }).then((res) => res.json())
 }
+
+export const getUserPosts = async (userId) => {
+    const response = await fetch(`http://localhost:8088/posts?userId=${userId}`); // Adjust URL to match your API
+    if (!response.ok) {
+      throw new Error("Failed to fetch user posts");
+    }
+    return await response.json();
+  };
+
+  export const deleteMyPost = (post) => {
+    return fetch(`http://localhost:8088/posts/${post}`, {
+        method: "DELETE"
+    })
+}

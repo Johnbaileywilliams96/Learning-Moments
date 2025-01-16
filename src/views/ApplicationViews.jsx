@@ -4,6 +4,8 @@ import { NavBar } from "../components/NavBar/NavBar"
 import { useEffect, useState } from "react"
 import { PostDetails } from "../components/PostDetails"
 import { NewPost } from "../components/NewPost"
+import { MyPost } from "../components/MyPost"
+import { Favorites } from "../components/Favorites"
 
 
 export const ApplicationViews = () => {
@@ -35,6 +37,15 @@ export const ApplicationViews = () => {
                 </Route>
                 <Route path="newPost">
                     <Route index element={<NewPost currentUser={currentUser} />} />
+                </Route>
+                <Route path="myPosts">
+                    <Route index element={<MyPost currentUser={currentUser} />} />
+                </Route>
+                <Route path="favorites">
+                    <Route index element={<Favorites currentUser={currentUser} />} />
+                </Route>
+                <Route path="profile">
+                    <Route index element={<Favorites currentUser={currentUser} />} />
                 </Route>
                 {/* Other nested routes go here */}
             </Route>

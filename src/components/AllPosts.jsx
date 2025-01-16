@@ -5,6 +5,7 @@ import { Post } from "./Post";
 import { getTopic } from "./../services/TopicServices";
 import { HandlePostSearch } from "./PostSearch";
 import { getAllLikes } from "./../services/LikesService";
+import "./allPosts.css"
 
 export const AllPosts = () => {
   const [posts, setAllPosts] = useState([]);

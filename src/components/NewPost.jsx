@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { getTopic } from "../services/TopicServices";
 import "./NewPost.css"
 import { createNewPost } from "../services/PostService";
+import { useNavigate } from "react-router-dom";
+
 
 
 export const NewPost = ({ currentUser }) => {
+    const navigate = useNavigate()
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [topics, setAllTopics] = useState([]);
@@ -43,6 +46,8 @@ export const NewPost = ({ currentUser }) => {
             
             // Show success message
             window.alert("Post created successfully!")
+
+            navigate("/myPosts")
             
             // Optionally redirect to posts list
             // navigate("/posts")  // Requires importing useNavigate from react-router-dom
@@ -99,12 +104,14 @@ export const NewPost = ({ currentUser }) => {
 </div>
 
       <div>
+        
           <button 
           className="post-save"
           onClick={handleNewPost}
           >
             Save
           </button>
+
      </div>
     </div>
 
