@@ -1,0 +1,62 @@
+.post-list-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.post-list-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.post-title-deetz {
+    font-size: 5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.post-title-deetz:hover {
+    color: #0066cc;
+    transform: scale(1.02);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.post-info {
+    font-weight: 700;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.body {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 9px;
+    margin: 10px 0;
+}
+
+.post-list-item {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.likes {
+    margin-top: 15px;
+    padding: 8px 0;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+}

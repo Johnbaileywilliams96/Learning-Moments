@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "./allPosts.css"
+import "./Post.css"
 
 
 
@@ -9,14 +9,13 @@ export const Post = ({post, likes}) => {
     
     <div>
     <Link to={`/postDetails/${post.id}`} key={post.id}>
-        <div className="post-info">Title</div>
+        <div className="post-title-deetz">{post.title}</div>
     </Link>
 
-        <div>{post.title}</div>
 
     </div>
-    <div>
-        <div className="post-info">Body</div>
+    <div className="body">
+        <div className="post-info">Body: </div>
         <div>{post.body}</div>
     </div>
         <div className="likes">Likes: {likes.length}</div>

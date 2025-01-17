@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getPostByPostId } from "./../services/PostService";
 import "./PostDetails.css";
 import {
@@ -105,6 +105,12 @@ export const PostDetails = ({ currentUser }) => {
           <button onClick={handleLike} className={hasUserLiked ? "liked" : ""}>
             {hasUserLiked ? "Unlike" : "Like"}
           </button>
+           <Link to="/allposts">
+          <button>
+            <span>All posts</span>
+          </button>
+           </Link>
+      
         </div>
       </section>
     </>

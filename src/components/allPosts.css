@@ -21,3 +21,50 @@ h2 {
   border-radius: 0.5rem;
   padding: 1rem;
 }
+
+.topics-dropdown select {
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-out; /* Made transition faster */
+}
+
+.topics-dropdown select:hover {
+  border-color: #2c2c2c;
+  transform: translateY(-2px); /* Adds a slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bigger shadow */
+  background-color: #f0f0f0;
+  font-weight: bold; /* Text becomes bold on hover */
+}
+
+.topics-dropdown select:focus {
+  outline: none;
+  border-color: #2c2c2c;
+  box-shadow: 0 0 0 3px rgba(44, 44, 44, 0.3);
+}
+
+.topics-dropdown select option {
+  padding: 8px;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.topics-dropdown select option:hover {
+  background-color: #e0e0e0;
+}
+
+.post-search {
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-out; /* Made transition faster */
+  border-color: #2c2c2c;
+  transform: translateY(-2px); /* Adds a slight lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bigger shadow */
+  background-color: #f0f0f0;
+  font-weight: bold; /* Text becomes bold on hover */
+}

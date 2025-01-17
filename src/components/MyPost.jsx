@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { deleteMyPost, getUserPosts } from "../services/PostService";
 import "./MyPost.css"
+import { Link } from "react-router-dom";
 
 
 export const MyPost = ({ currentUser }) => {
@@ -34,7 +35,9 @@ export const MyPost = ({ currentUser }) => {
         ) : (
           userPosts.map(post => (
             <div key={post.id} className="post-card">
+            <Link to={`/postDetails/${post.id}`} key={post.id}>
               <h2>{post.title}</h2>
+            </Link>
               <p className="post-date">{new Date(post.date).toLocaleDateString()}</p>
               <p className="post-body">{post.body}</p>
               <button

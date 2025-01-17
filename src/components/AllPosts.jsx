@@ -5,7 +5,7 @@ import { Post } from "./Post";
 import { getTopic } from "./../services/TopicServices";
 import { HandlePostSearch } from "./PostSearch";
 import { getAllLikes } from "./../services/LikesService";
-import "./allPosts.css"
+import "./allPosts.css";
 
 export const AllPosts = () => {
   const [posts, setAllPosts] = useState([]);
@@ -38,12 +38,12 @@ export const AllPosts = () => {
     fetchAllLikes();
   }, []);
 
-  useEffect(() => {
-    const foundPosts = posts.filter((post) =>
-      post.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setAllFilteredPosts(foundPosts);
-  }, [searchTerm, posts]);
+//   const filterPosts = () = {
+//     const filtered = [...posts]
+//     if (selectedTopicId == "0") {
+//         filtered = filtere
+//     }
+//   }
 
   const handleTopicChange = (event) => {
     const topicId = event.target.value;
@@ -59,13 +59,21 @@ export const AllPosts = () => {
     }
   };
 
+  useEffect(() => {
+    const foundPosts = posts.filter((post) =>
+      post.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setAllFilteredPosts(foundPosts);
+  }, [searchTerm, posts]);
   return (
     <>
+    <div className="my-posts-container">
+
       <h1>All Posts</h1>
 
       <HandlePostSearch setSearchTerm={setSearchTerm} />
 
-      <div>
+      <div className="topics-dropdown">
         <select
           id="topics"
           value={selectedTopicId}
@@ -86,12 +94,13 @@ export const AllPosts = () => {
         {filteredPosts.map((post) => {
           const postLikes = likes.filter((like) => like.postId === post.id);
           return (
-            <>
+            
               <Post post={post} key={post.id} likes={postLikes} />
-            </>
+            
           );
         })}
       </div>
+    </div>
     </>
   );
 };

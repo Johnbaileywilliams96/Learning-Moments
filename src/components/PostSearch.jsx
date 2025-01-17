@@ -1,3 +1,5 @@
+import "./AllPosts.css"
+
 export const HandlePostSearch = ({setSearchTerm}) => {
     return <>
     <input
