@@ -6,6 +6,7 @@ import { PostDetails } from "../components/PostDetails"
 import { NewPost } from "../components/NewPost"
 import { MyPost } from "../components/MyPost"
 import { Favorites } from "../components/Favorites"
+import { Profile } from "../components/Profile"
 
 
 export const ApplicationViews = () => {
@@ -45,7 +46,7 @@ export const ApplicationViews = () => {
                     <Route index element={<Favorites currentUser={currentUser} />} />
                 </Route>
                 <Route path="profile">
-                    <Route index element={<Favorites currentUser={currentUser} />} />
+                    <Route index element={<Profile currentUser={currentUser} />} />
                 </Route>
                 {/* Other nested routes go here */}
             </Route>

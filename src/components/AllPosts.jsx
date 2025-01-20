@@ -38,12 +38,6 @@ export const AllPosts = () => {
     fetchAllLikes();
   }, []);
 
-//   const filterPosts = () = {
-//     const filtered = [...posts]
-//     if (selectedTopicId == "0") {
-//         filtered = filtere
-//     }
-//   }
 
   const handleTopicChange = (event) => {
     const topicId = event.target.value;
